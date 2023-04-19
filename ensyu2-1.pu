@@ -5,12 +5,12 @@ actor 交通費用精算システム #DDDDDD;line:black;line.bold;
 actor 承認者 #DDDDDD;line:black;line.bold;
 actor 経理担当者 #DDDDDD;line:black;line.bold;
 rectangle 出張申請システム {
-usecase 出張申請を登録する
-usecase 出張申請を提出する
-usecase 出張申請を承認する
-usecase 出張申請を却下する
-usecase 出張申請を差し戻す
-usecase 出張申請を確認する
+    usecase 出張申請を登録する
+    usecase 出張申請を提出する
+    usecase 出張申請を承認する
+    usecase 出張申請を却下する
+    usecase 出張申請を差し戻す
+    usecase 出張申請を確認する
 }
 申請者 --> 出張申請を登録する
 申請者 --> 出張申請を提出する
