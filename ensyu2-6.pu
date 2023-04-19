@@ -6,9 +6,13 @@ actor 従業員 #DDDDDD;line:black;line.bold;
 actor 人事担当者 #DDDDDD;line:black;line.bold;
     rectangle 従業員登録システム {
         usecase 社員情報
+        usecase 従業員登録
     }
     }
 従業員 --> 変更届
 変更届 .|> 人事担当者 :<< extend >>
-人事担当者 --> 社員情報
+人事担当者 --|> 社員情報
+社員情報 .|> 従業員 :<< extend >>
+人事担当者 --> 従業員登録
+従業員登録 --|> 社員情報
 @enduml
