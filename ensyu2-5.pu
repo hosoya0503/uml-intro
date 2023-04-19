@@ -1,0 +1,12 @@
+@startuml 演習２－５
+left to right direction
+actor 田中 #DDDDDD;line:black;line.bold;
+actor 鈴木 #DDDDDD;line:black;line.bold;
+    rectangle 販売管理システム {
+        usecase (<u>注文商品確認</u>\n拡張点\n出荷)as input
+        usecase 出荷状況登録
+    }
+田中 --> input
+鈴木  <|-- (input) :<< extend >>
+鈴木 --> 出荷状況登録
+@enduml
