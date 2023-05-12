@@ -1,0 +1,30 @@
+@startuml プロジェクト開発
+left to right direction
+actor 社員 #DDDDDD;line:black;line.bold;
+actor 管理者 #DDDDDD;line:black;line.bold;
+rectangle 勤怠管理システム {
+    usecase 社員証読み取り
+    usecase ログイン as 社員ログイン
+    usecase 出退勤の確認 as 社員用確認
+
+    usecase ログイン as 管理者ログイン
+    usecase 管理者新規登録
+    usecase 出退勤の確認 as 管理者用確認
+    usecase 社員検索機能
+    usecase 社員勤務状況一覧
+
+}
+社員 --> 社員証読み取り
+社員 --> 社員用確認
+社員用確認 --.> 社員ログイン: << include >>
+
+管理者 --> 社員証読み取り
+管理者 --> 管理者新規登録
+管理者 --> 管理者用確認
+管理者用確認 --.> 管理者ログイン: << include >>
+管理者 --> 社員検索機能
+社員検索機能 --.> 管理者ログイン: << include >>
+管理者 --> 社員勤務状況一覧
+社員勤務状況一覧 --.> 管理者ログイン: << include >>
+
+@enduml
