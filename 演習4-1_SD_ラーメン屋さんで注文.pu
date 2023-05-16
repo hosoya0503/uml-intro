@@ -1,0 +1,6 @@
+@startuml ラーメン
+hide footbox
+Actor 登録会員 as member
+participant ":ログイン画面" as login
+participant ":ログインコントローラ" as control
+participant "会員情報" as entit
