@@ -3,11 +3,12 @@ left to right direction
 actor 社員 #DDDDDD;line:black;line.bold;
 actor 管理者 #DDDDDD;line:black;line.bold;
 rectangle 勤怠管理システム {
-    usecase 社員証読み取り
+
     usecase ログイン as 社員ログイン
     usecase 出退勤の確認 as 社員用確認
     usecase 残業申請 as 社員残業
-
+    usecase 社員証読み取り
+    
     usecase ログイン as 管理者ログイン
     usecase 管理者新規登録
     usecase 出退勤の確認 as 管理者用確認
@@ -35,4 +36,5 @@ rectangle 勤怠管理システム {
 管理者残業 --.> 管理者ログイン: << !include >>
 管理者 --> 残業申請の承諾
 残業申請の承諾 --.> 管理者ログイン: << include >>
+
 @enduml
