@@ -4,7 +4,6 @@ actor 社員 #DDDDDD;line:black;line.bold;
 actor 管理者 #DDDDDD;line:black;line.bold;
 rectangle 勤怠管理システム {
 
-    usecase PWの変更
     usecase 自身の出退勤状況確認
     usecase 残業申請
     usecase 社員証読み取り
@@ -20,7 +19,6 @@ rectangle 勤怠管理システム {
 
 
 }
-社員 --> PWの変更
 社員 --> 社員証読み取り
 社員 --> 自身の出退勤状況確認
 社員 --> 残業申請
