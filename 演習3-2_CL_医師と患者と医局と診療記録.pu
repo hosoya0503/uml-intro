@@ -1,0 +1,16 @@
+@startuml 図３－２
+class 医師 as Doctor {
+
+}
+class 患者 as Patient {
+    
+}
+class 医局 as MedicalDepartment {
+  - 名前:string
+}
+class 診療記録
+Doctor --> Patient: 診察
+Doctor --> MedicalRecord: 患者の診察記録を作成
+Patient "1" --up-> "1" MedicalDepartment: 担当
+Doctor "1" --down-> "1" MedicalDepartment: 所属
+@enduml
