@@ -7,7 +7,7 @@ rectangle 勤怠管理システム {
     usecase 自身の出退勤状況確認
     usecase 残業申請
     usecase 社員証読み取り
-    usecase 残業承認通知
+    usecase 通知
     usecase 残業報告
 
     usecase 社員新規登録
