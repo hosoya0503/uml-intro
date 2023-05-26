@@ -1,0 +1,17 @@
+@startuml
+actor 受注係
+boundary 注文登録画面
+entity 商品
+boundary 注文
+
+受注係 -> 注文登録画面: 商品情報確認()
+    activate 受注係
+        activate 注文登録画面
+            注文登録画面 -> 商品: 商品情報取得(商品情報)
+            商品 --> 注文登録画面: 商品情報表示(商品情報)
+            注文登録画面 -> 注文登録画面: 商品登録(注文情報)
+        注文登録画面 -> 注文: 注文登録(注文情報)
+        deactivate 注文登録画面
+    deactivate 受注係
+@enduml
+    

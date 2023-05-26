@@ -1,0 +1,28 @@
+@startuml test
+left to right direction
+actor 利用者
+actor ホテル従業員
+actor ホテル管理者
+package ホテル予約システム{
+    usecase 会員登録
+    usecase 空室閲覧
+    usecase 空室入力
+    usecase  (<u>部屋予約</u>\n拡張点\nキャンペーン期間) as input
+    usecase 利用者ログイン
+    usecase 予約集計
+    usecase キャンペーン価格
+    usecase 管理者ログイン
+}
+利用者 --> 会員登録
+利用者 --> 空室閲覧
+input <. キャンペーン価格 <<extend>>
+利用者ログイン <. input : <<include>>
+会員登録 <. 利用者ログイン : <<include>>
+利用者 --> input
+ホテル従業員 --> 空室入力
+管理者ログイン <-- ホテル従業員
+ホテル管理者 --> 予約集計
+管理者ログイン <-- ホテル管理者
+
+
+@enduml
