@@ -14,6 +14,7 @@ fork again
 :ルーを入れる;
 ->煮込む;
 end fork
+:盛り付け;
 :完成;
 stop
 @enduml
