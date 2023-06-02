@@ -1,13 +1,13 @@
 @startuml 自販機
 
-actor 客 as Customer
-object 料金装置 as PaymentDevice
-object ボタン as Button
-object ベンダー装置 as VendorDevice
+object 客
+object 料金装置
+object ボタン
+object ベンダー装置
 
-Customer -> PaymentDevice: 残高をチャージする
-Customer -> Button: ボタンを押す
-Button -> VendorDevice: 商品を購入する
-VendorDevice --> Customer: ドリンクを配布する
+客 --> 料金装置: 残高をチャージする
+客 --> ボタン: ボタンを押す
+ボタン --> ベンダー装置: 商品を購入する
+ベンダー装置 --> 客: ドリンクを配布する
 
 @enduml
