@@ -8,12 +8,11 @@ actor ベンダー as Vendor
 
 rectangle 自動販売機 {
   usecase 商品を購入する as Buy
-  usecase 在庫を確認する as CheckStock
   usecase 売上額を確認する as CheckRevenue
   usecase 商品を追加する as AddProduct
 
   Customer --> Buy
-  Customer --> CheckStock
+  Vendor --> CheckStock
   Customer --> CheckRevenue
   Vendor --> AddProduct
 }
