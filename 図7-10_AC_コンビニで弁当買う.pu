@@ -1,4 +1,4 @@
-@startuml カレー作り
+@startuml コンビニで弁当を買う
 |客|
 |店員|
 !pragma useVerticalIf on
