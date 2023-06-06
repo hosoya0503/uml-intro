@@ -38,4 +38,5 @@ end fork
 :料理を食べる;
 :代金を払う;
 stop
+
 @enduml
