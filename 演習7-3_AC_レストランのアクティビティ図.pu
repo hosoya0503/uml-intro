@@ -29,10 +29,11 @@ end fork
 |給仕|
 fork
 :料理を運ぶ;
+:料理]
 fork again
 :伝票を渡す;
-end fork
 :伝票]
+end fork
 |顧客|
 :料理を食べる;
 :代金を払う;
