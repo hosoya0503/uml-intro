@@ -1,16 +1,27 @@
-@startuml 図３－２
-class 医師 as Doctor {
+@startuml 医者
+class Doctor {
+  +name: string
+  +specialty: string
+  +examinePatient(patient: Patient): void
+  +createRecord(patient: Patient): void
+}
 
+class Patient {
+  +name: string
+  +assignedDoctor: Doctor
 }
-class 患者 as Patient {
-    
+
+class Record {
+  +details: string
 }
-class 医局 as MedicalDepartment {
-  - 名前:string
+
+class Office {
+  +name: string
+  +doctors: List<Doctor>
 }
-class 診療記録
-Doctor --> Patient: 診察
-Doctor --> MedicalRecord: 患者の診察記録を作成
-Patient "1" --up-> "1" MedicalDepartment: 担当
-Doctor "1" --down-> "1" MedicalDepartment: 所属
+
+Doctor --|> Record
+Doctor --|> Patient
+Patient o--> Doctor
+Office o--> Doctor
 @enduml
