@@ -1,0 +1,44 @@
+@startuml ハンバーガー
+
+class a {
+    合計
+}
+class b {
+    数量
+    小計
+}
+class c {
+    値引き額
+    期限
+}
+class d {
+    名称
+    単価
+}
+class e {
+    サイズ
+}
+class f {
+    種別
+}
+class g {
+}
+class h {
+}
+class i {
+}
+class j {
+    種別
+}
+class k {
+    サイズ
+}
+a "1.*" o= b
+b "0..*" = "0..1" c
+b "0..*" -- "1" d
+e "1..3" = "0..*" f
+f =^ d
+g -^ d
+g "1" -- "1" h
+
+@enduml
